@@ -1,0 +1,22 @@
+{{#if error}}
+<h1>Estimado usuario, el correo que ingrso o la contraseña están incorrectas</h1>
+{{/if}}
+<div class="form-container  pt-5   center">
+    <div class="bg-success-subtle rounded-5 p-5">
+        <h3>Login de Arrien2.cl</h3>
+        <form action="/Login" method="POST">
+            <div class="mb-2 mt-2">
+                <label for="email" class="form-label">Ingrese su correo</label>
+                <input type="email" class="form-control" name="correo" placeholder="nombre@correo.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Ingrese su contraseña</label>
+                <input type="password" class="form-control" name="password"  placeholder="Contraseña1234" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Login</button>
+            <div class="text-center mt-2">
+                <a href="Registro" class="btn btn-link">Regístrese aquí</a>
+            </div>
+        </form>
+    </div>
+</div>

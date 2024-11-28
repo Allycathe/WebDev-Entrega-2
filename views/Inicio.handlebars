@@ -1,0 +1,35 @@
+<div class="fondo mb-5">
+    <div class="text-overlay">
+        <h1 class="bienvenida">Bienvenido a Arriendos Chile</h1>
+        <p class="bienvenida">Descubre una amplia gama de cabañas en los destinos más hermosos de Chile. Desde la costa hasta las montañas, tenemos el lugar perfecto para tus vacaciones.</p>
+    </div>
+</div>
+<div id="catalogo" class="container mt-5">
+    <h2 class="text-center">Cabañas Destacadas</h2>
+    <div class="row">
+        {{#each lista}}
+            <div class="col-sm-3">
+                <div class="card card h-90">
+                    <img src="{{this.imagen}}" class="card-img-top" ">
+                    <div class="card-body">
+                        <strong><h4 class="card-title">{{this.nombre}}</h4></strong>
+                        <p class="card-text">{{this.descripcion}}</p>
+                        <p class="card-text"><strong>Precio:</strong> ${{this.precio}} por noche</p>
+                        <p class="card-text"><strong>Stock:</strong> {{this.stock}}</p>
+                        <a href="/Producto/{{this.id}}" class="btn btn-primary">Ver más</a>
+                        {{#if stock}}
+                        <form action="/Agregar/{{this.id}}" method="POST">
+                        <button type="submit" class="btn btn-success" >Agregar al carro </button>
+                        {{else}}
+                        <div>
+                        <button type="button" class="btn btn-outline-dark" disabled>Añadir al carrito</button>
+                        </div>
+                        {{/if}}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+

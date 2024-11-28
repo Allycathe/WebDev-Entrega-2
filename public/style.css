@@ -1,0 +1,265 @@
+body {
+  font-family: Arial, sans-serif, 'Roboto';
+  background-color: #dccfb2;
+  display: flex;
+  overflow: visible;
+  flex-direction: column;
+  height: 100%;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Poppins', sans-serif;
+}
+h3 {
+  text-align: center;
+  color: black;
+}
+h5 {
+  color: white;
+}
+label {
+  color: black;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+}
+footer {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  background-color: #004d40;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #c0c0c0;
+  text-decoration: underline;
+}
+table {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+img{
+  border-radius: 50;
+}
+.tabla-desktop {
+  width: 100%;
+  border-collapse: collapse;
+}
+.container {
+  align-items: center;
+  position: relative;
+  color: white;
+  margin-top: auto;
+  flex: 1;
+}
+.form-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 0;
+  list-style: none;
+  margin: 0;
+}
+.navbar-custom {
+  background-color: #004d40;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+.btn {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+.card {
+  margin-bottom: 2rem;
+  color: black;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.text-overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 5rem 0;
+}
+.text-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.text-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.text-overlay p.bienvenida {
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://casasprefabricadaschile.cl/wp-content/uploads/2020/08/caba%C3%B1a-de-madera.jpg')
+    no-repeat center center;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+}
+.custom-house {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fondo {
+  background-image: url('https://images.homify.com/v1480506156/p/photo/image/1720797/13076654_1705415896405714_6751129097182177459_n.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+.bienvenida {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.comprobante-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.comprobante-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.comprobante-details {
+  text-align: left;
+  margin-top: 20px;
+  color: #555;
+}
+.comprobante-details p {
+  margin: 5px 0;
+}
+.comprobante-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #4CAF50;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+.profile-container {
+  
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
+}
+.profile-container h1 {
+  font-size: 2rem;
+}
+.profile-container p {
+  font-size: 1.2rem;
+  color: #000;
+}
+.btn-primary {
+  background-color: #0066cc;
+  border-color: #0066cc;
+}
+.btn-primary:hover {
+  background-color: #004999;
+  border-color: #004999;
+}
+
+@media only screen and (max-width: 800px) {
+  #no-more-tables tbody,
+  #no-more-tables tr,
+  #no-more-tables td {
+    display: block;
+  }
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  #no-more-tables td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+  }
+  #no-more-tables tr {
+    border-bottom: 1px solid #ccc;
+  }
+}

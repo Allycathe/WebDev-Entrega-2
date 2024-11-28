@@ -1,0 +1,32 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="profile-container text-center bg-success-subtle">
+    <h3 class="mb-3">Bienvenido {{nombre}}</h3>
+    <p class="mb-1"><strong>Correo Electrónico:</strong> {{correo}}</p>
+    <p class="mb-1"><strong>Saldo:</strong> {{dinero}}</p>
+    <p> Desea agregar más?</p>
+    <div class="text-center mb-4">
+            <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#crearProductoModal">Agregar dinero</button>
+    </div>
+    <p> <a href="/Logout">Cerrar sesión</a></p>
+  </div>
+</div>
+<div class="modal fade" id="crearProductoModal" tabindex="-1" aria-labelledby="crearProductoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="crearProductoModalLabel">Agregar dinero</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="/Wallet">
+                        <div class="form-group mb-3">
+                            <input type="hidden" name="id" value="{{ id }}">
+                            <label for="nombre">Ingrese cantidad a agregar:</label>
+                            <input type="number" class="form-control" name="money" min="1" step="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar dinero a la wallet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

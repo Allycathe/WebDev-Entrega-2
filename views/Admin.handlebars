@@ -1,0 +1,71 @@
+<div class="container mt-1 pt-2 mb-5">
+    <h1 class="mb-4">Administración de Productos</h1>
+    <div class="bg-success-subtle rounded-5 p-5">
+        <h3>Monto Total de Ventas: ${{this.suma}}CLP</h3>
+        <div class="text-center mb-4">
+            <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#crearProductoModal">Crear Producto</button>
+            <a href='ReciboAdmin', class="btn btn-primary mb-3">Recibos</a>
+        </div>
+        <div class="table-responsive" id="no-more-tables">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                {{#each lista}}
+                <tbody>
+                    <tr>
+                        <td>{{this.nombre}}</td>
+                        <td>{{this.descripcion}}</td>
+                        <td>{{this.precio}}</td>
+                        <td>{{this.stock}}</td>
+                        <td><a href="/admin/editar/{{this.id}}" class="btn btn-warning">Editar</a>
+                        <button class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="crearProductoModal" tabindex="-1" aria-labelledby="crearProductoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearProductoModalLabel">Crear Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="/Productos">
+                        <div class="form-group mb-3">
+                            <label for="nombre">Nombre del producto:</label>
+                            <input type="text" class="form-control" name="nombre" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="descripcion">Descripción:</label>
+                            <textarea class="form-control" name="descripcion" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="precio">Precio:</label>
+                            <input type="number" class="form-control" name="precio" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="imagen">Imagen:</label>
+                            <input type="url" class="form-control" name="imagen">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Stock">Stock:</label>
+                            <input type="number" class="form-control" name="stock">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Crear producto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

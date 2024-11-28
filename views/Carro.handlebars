@@ -1,0 +1,45 @@
+{{#if error}}
+<h1>Estimado usuario, no ha agregado ningun producto al carrito</h1>
+{{/if}}
+<div class="container mt-1 pt-2 mb-5">
+    <h1 class="mb-4">Productos en el carrito</h1>
+        <div class="bg-success-subtle rounded-5 p-5">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        {{#each lista}}
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{this.imagen}}" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{this.nombre}}</h5>
+                                    <p class="card-text"><strong>Precio unitario:</strong> {{this.precio}}</p>
+                                    <p class="card-text"><strong>Cantidad:</strong> {{this.cantidad}}</p>
+                                    <p class="card-text"><strong>Precio por cantidad:</strong> {{this.precio}}*{{this.cantidad}}</p>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                        <form action="/Borrar/{{this.idproducto}}" method="POST">
+                                        <button type="submit" class="btn btn-danger mt-2">Eliminar</button>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h3 class="card-title">Resumen de Pago</h3>
+                        <p><strong>Dinero disponible:</strong> ${{dinero1}} CLP</p>
+                        <p><strong>Total a pagar:</strong> ${{suma}} CLP</p>
+                        <form method="POST" action="/Pago">
+                        <button class="btn btn-light w-100">Pagar los productos seleccionados</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

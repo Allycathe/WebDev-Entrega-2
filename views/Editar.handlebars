@@ -1,0 +1,25 @@
+<div class="container mt-1 pt-2 mb-5">
+    <form action="/editar/producto/{{producto.id}}" method="POST">
+        <div class="form-group mb-3">
+            <label for="editNombre">Nombre del producto:</label>
+            <input value="{{producto.nombre}}" type="text" class="form-control"  name="nombre" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editDescripcion">Descripción:</label>
+            <textarea  class="form-control" name="descripcion" rows="3" required> {{producto.descripcion}}</textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editPrecio">Precio:</label>
+            <input value="{{producto.precio}}" type="number" class="form-control" name="precio" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editImagen"> URL Imagen:</label>
+            <input value="{{producto.imagen}}" type="url" class="form-control" name="imagen" >
+        </div>
+        <div class="form-group mb-3">
+            <label for="editStock"> Stock:</label>
+            <input value="{{producto.stock}}"  type="number" class="form-control" name="stock" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    </form>
+</div>
