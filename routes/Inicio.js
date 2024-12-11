@@ -5,7 +5,7 @@ export const InicioRouter = new Router();
 
 InicioRouter.get('/Inicio', async (req, res) => {
   const lista = await sql('SELECT * FROM Productos order by id desc');
-  return res.json({lista})
+  return res.render('inicio',{lista} )
 });
 InicioRouter.get('/index', (req, res) => {
   res.render('index');
